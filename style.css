@@ -21,21 +21,40 @@ main {
     padding: 20px;
 }
 
-h2 {
+.topic {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out; /* אפקט מעבר */
+}
+
+.text {
+    width: 45%;
+}
+
+.text h2 {
+    font-size: 36px;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase; /* כותרות באותיות גדולות */
     color: #4CAF50;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+.text p, .text ul {
+    font-size: 16px;
 }
 
-ul li {
-    margin-bottom: 10px;
+.image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-section {
-    margin-bottom: 30px;
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -50,10 +69,15 @@ footer {
 }
 
 footer p {
-    margin: 0; /* מבטל רווחים מסביב לטקסט */
+    margin: 0;
 }
 
 h3 {
     color: #333;
     margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
