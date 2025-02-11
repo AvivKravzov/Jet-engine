@@ -21,38 +21,21 @@ main {
     padding: 20px;
 }
 
-section {
-    margin-bottom: 30px;
+h2 {
+    color: #4CAF50;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
-    margin: 0 auto;
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-label, input {
+ul li {
     margin-bottom: 10px;
 }
 
-input[type="text"], input[type="email"] {
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
+section {
+    margin-bottom: 30px;
 }
 
 footer {
@@ -63,4 +46,9 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+h3 {
+    color: #333;
+    margin-top: 20px;
 }
