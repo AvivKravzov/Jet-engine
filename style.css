@@ -46,6 +46,11 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    font-size: 12px; /* משנה את גודל הטקסט */
+}
+
+footer p {
+    margin: 0; /* מבטל רווחים מסביב לטקסט */
 }
 
 h3 {
