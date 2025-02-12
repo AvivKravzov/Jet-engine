@@ -45,12 +45,6 @@ header {
     border-radius: 10px;
 }
 
-/* הורדת ה-scroll snap כדי למנוע קפיצות */
-.scroll-container {
-    overflow-y: auto;
-    scroll-snap-type: none; /* ביטול קפיצה לנושא הבא */
-}
-
 /* עיצוב הכותרות */
 h2 {
     font-size: 36px;
