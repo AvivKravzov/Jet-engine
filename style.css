@@ -1,48 +1,47 @@
+/* הגדרות כלליות */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Heebo', sans-serif;
     direction: rtl;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    scroll-behavior: smooth;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 20px;
+/* הגדרת קונטיינר עם גלילה חלקה לכל מסך */
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
-h1 {
-    margin: 0;
-}
-
-main {
-    padding: 20px;
-}
-
+/* כל חלק (נושא) יתפוס 100% מגובה המסך */
 .topic {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
-    animation: fadeIn 1s ease-in-out; /* אפקט מעבר */
+    align-items: center;
+    height: 100vh; /* כל נושא בגודל של מסך מלא */
+    padding: 20px;
+    scroll-snap-align: start; /* גורם לכל חלק להתיישר בדיוק למסך */
 }
 
+/* עיצוב הצד של הטקסט */
 .text {
     width: 45%;
+    padding: 20px;
 }
 
 .text h2 {
-    font-size: 36px;
-    font-family: 'Anton', sans-serif;
-    text-transform: uppercase; /* כותרות באותיות גדולות */
+    font-size: 40px;
+    font-weight: bold;
     color: #4CAF50;
 }
 
 .text p, .text ul {
-    font-size: 16px;
+    font-size: 18px;
 }
 
+/* עיצוב התמונות */
 .image {
     width: 45%;
     display: flex;
@@ -55,29 +54,4 @@ main {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-size: 12px; /* משנה את גודל הטקסט */
-}
-
-footer p {
-    margin: 0;
-}
-
-h3 {
-    color: #333;
-    margin-top: 20px;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
 }
