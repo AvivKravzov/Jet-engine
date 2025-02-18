@@ -1,38 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     let slides = document.querySelectorAll(".slide");
-    let currentSlide = 0;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.display = i === index ? "flex" : "none";
+    function checkSlides() {
+        slides.forEach(slide => {
+            let slidePosition = slide.getBoundingClientRect().top;
+            let screenPosition = window.innerHeight / 1.3;
+
+            if (slidePosition < screenPosition) {
+                slide.classList.add("visible");
+            }
         });
     }
 
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
-
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-    }
-
-    // יצירת כפתורי ניווט
-    let nextButton = document.createElement("button");
-    let prevButton = document.createElement("button");
-
-    nextButton.innerText = "➡️";
-    prevButton.innerText = "⬅️";
-
-    nextButton.classList.add("nav-button");
-    prevButton.classList.add("nav-button");
-
-    document.body.appendChild(nextButton);
-    document.body.appendChild(prevButton);
-
-    nextButton.addEventListener("click", nextSlide);
-    prevButton.addEventListener("click", prevSlide);
-
-    showSlide(currentSlide);
+    window.addEventListener("scroll", checkSlides);
+    checkSlides(); // להריץ את הפונקציה בעת טעינת הדף
 });
