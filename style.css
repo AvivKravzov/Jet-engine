@@ -1,36 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    direction: rtl;
-    text-align: right;
-}
-
-body {
-    background-color: #f4f4f4;
-    overflow-x: hidden;
-}
-
-header {
-    background: #000;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 24px;
-}
-
-.container {
-    width: 100%;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-}
-
 .slide {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    flex-direction: row-reverse; /* שומר על פריסה הגיונית מימין לשמאל */
+    justify-content: space-between;  /* מתאם את התוכן */
+    flex-direction: row-reverse; /* התוכן יהיה מימין לשמאל */
     height: 100vh;
     opacity: 0;
     transform: translateY(30px);
@@ -38,13 +10,8 @@ header {
     padding: 40px;
 }
 
-.slide.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 .text {
-    width: 45%; /* תיבת טקסט גדולה יותר */
+    width: 45%;
     font-size: 22px;
     padding: 30px;
     background: rgba(255, 255, 255, 0.9);
@@ -68,12 +35,4 @@ header {
     height: auto; /* תמונות לא יתעוותו */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #222;
-    color: white;
-    font-size: 14px;
 }
