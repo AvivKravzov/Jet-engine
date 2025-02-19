@@ -22,19 +22,16 @@ header {
 
 .container {
     width: 100%;
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
+    overflow-y: auto;
 }
 
 .slide {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
     height: 100vh;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
@@ -43,18 +40,28 @@ header {
     transform: translateY(0);
 }
 
-.text {
-    width: 70%;
-    font-size: 20px;
-    text-align: center;
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 80%;
+    max-width: 1200px;
+    background: white;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.text {
+    flex: 1;
+    font-size: 20px;
+    text-align: right;
+    padding: 20px;
+}
+
 .image {
-    width: 50%;
+    flex: 1;
     display: flex;
     justify-content: center;
 }
